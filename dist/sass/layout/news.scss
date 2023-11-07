@@ -1,0 +1,90 @@
+#news {
+    article {
+        background-color: $bggrey;
+
+        h3 {
+            padding: rem(15) rem(15);
+            color: $primary;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .news-grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin-top: rem(20);
+    }
+
+    .button {
+        color: $secondary;
+        margin-bottom: rem($bp-d);
+    }
+}
+
+@include breakpoint(0, $mobile) {
+    #news {
+        margin-top: rem($sm-m);
+        margin-bottom: rem($sm-m);
+        padding: 0 rem($bp-m);
+
+        h2 {
+            padding-bottom: rem(20);
+        }
+
+
+        article {
+            flex-basis: rem(380);
+            flex-grow: 0;
+            flex-shrink: 0;
+            margin-right: rem($bp-m);
+
+            p {
+                padding:rem(20) rem(20);
+            }
+
+            img {
+                height: rem(250);
+                object-fit: cover;
+            }
+
+            .button {
+                margin-left: rem($bp-m);
+            }
+        }
+    }
+}
+
+@include breakpoint($desktop) {
+    #news {
+        margin-top: rem($sp-d);
+        margin-bottom: rem($sp-d * 2);
+        padding: 0 rem($bp-d);
+    }
+
+    article {
+        flex-basis: rem(440);
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin-right: rem($bp-d);
+
+        p {
+            padding:rem(20) rem(20);
+        }
+
+        img {
+            height: rem(250);
+            object-fit: cover;
+        }
+
+        .button {
+            margin-left: rem($bp-d);
+        }
+    }
+}

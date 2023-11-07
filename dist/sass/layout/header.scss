@@ -1,0 +1,63 @@
+header {
+  width: 100%;
+  background-image: url(../../images/hero_img.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: black;  
+
+
+h2 {
+  font-weight: 300;
+  color: $primary;
+}
+
+}
+
+
+@include breakpoint(0, $mobile) {
+    header {
+      background-image: url(../../images/hero_img_mobile.jpg);
+      position: relative;
+      background-size: cover;
+      background-position: top left;
+      height: 80vh;
+
+      .hero-container {
+        position: absolute;
+        top: 60%;
+        right: 2rem;
+      }
+
+      .button {
+        background-color: black;
+      }
+
+      h2 {
+        font-size: rem(34);
+        padding-bottom: rem($bp-m);
+
+        span {
+          display: block;
+        }
+      }
+
+    }
+  }
+  
+  @include breakpoint($desktop) {
+    header {
+      position: relative;
+      height: 80vh;
+
+      .hero-container {
+        position: absolute;
+        top: 35%;
+        left: 10%;
+
+        h2 {
+          padding-bottom: rem($bp-d);
+        }
+      }
+    }
+  }

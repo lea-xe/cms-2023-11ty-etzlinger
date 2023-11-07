@@ -1,0 +1,107 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: max-content;
+
+    h1 {
+      font-family: "Source Sans 3", sans-serif;
+      color: $white;
+      font-weight: 300;
+    }
+  
+    h1 span {
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    li {
+      padding-left: rem($bp-m);
+
+      a {
+        font-family: "Source Sans 3", sans-serif;
+        font-size: rem(16);
+      }
+    }
+  
+    ul {
+      display: flex;
+      align-items: flex-end;
+      list-style: none;
+    }
+  }
+
+@include breakpoint(0, $mobile) {
+  .nav-container{
+    padding: rem($bp-m);
+  }
+
+  h1 {
+    font-size: rem(16);
+  }
+  #navbar {
+    position: absolute;
+    padding: rem($bp-m);
+    top: 0;
+    right: 0;
+  }
+  
+  #navbar ul {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    visibility: hidden;
+    list-style: none;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    padding: 3rem 1rem 1rem 1rem;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
+    background-color: hsl(0deg, 0%, 21%);
+    z-index: 1;
+  
+    li {
+      padding-top: rem($bp-d);
+      z-index: 2;
+  
+      a{
+        font-weight: 300;
+        color: $white;
+      }
+    }
+  }
+}
+
+@include breakpoint($desktop) {
+.nav-container{
+  padding: rem($bp-d);
+
+  li {
+    a{
+      color: $orangelighter;
+      border-bottom: 1px solid $primary;
+      font-weight: 600;
+    }
+  }
+}
+
+h1 {
+  font-size: rem(16);
+}
+
+  #hamburger {
+    display: none;
+}
+
+.open {
+    display: none;
+}
+}
+
+

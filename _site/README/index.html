@@ -1,0 +1,21 @@
+<h1>Marcus G. Miller's website</h1>
+<h2>Webdev-Dependencies</h2>
+<p><code>npm install</code></p>
+<h2>Live server / browser syncing</h2>
+<p><code>npx browser-sync dist -w</code></p>
+<h3>Please note when using browser-sync</h3>
+<p>On Windows only <code>build.sh</code> on/after save will work with browser-sync. So only use clean-build.sh before you deploy.<br>
+On MacOs you can always use clean-build.sh.</p>
+<h2>Build</h2>
+<p>Run <code>./build</code> to</p>
+<ul>
+<li>compile sass</li>
+<li>bundle JavaScript</li>
+<li>copy the index-file</li>
+<li>copy the `/images'-folder</li>
+<li>...</li>
+</ul>
+<h3>Clean Build</h3>
+<p>Run <code>./clean-build</code> to build a new dist-folder from scratch.</p>
+<h2>Deploy with netlify</h2>
+<p>If you only need a static site and set up netlify, simply push to main, which then automatically triggers a new deployment.</p>

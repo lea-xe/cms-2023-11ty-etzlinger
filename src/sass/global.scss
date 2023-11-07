@@ -1,0 +1,76 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+h2 {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 300;
+  color: $primary;
+  font-size: rem(50);
+}
+
+h3 {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 300;
+  color: $orangelighter;
+}
+
+h4 {
+  color: $white;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 300;
+}
+
+p {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: rem(16);
+  line-height: rem(22);
+  color: $secondary;
+}
+
+.button {
+  display: inline-block;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: rem(18);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $white;
+  border: 1px solid $orangelighter;
+  text-decoration: none;
+  padding: rem(10) rem(20);
+  cursor: pointer;
+}
+
+.super-headline {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@include breakpoint(0, $mobile) {
+  .button {
+    font-size: rem(16);
+  }
+
+  h2 {
+    font-size: rem(28);
+  }
+
+  .super-headline {
+    font-size: rem(16);
+    line-height: normal;
+  }
+
+  h3, h4 {
+    font-size: rem(20);
+  }
+}
+
+@include breakpoint($desktop) {
+  .super-headline {
+    font-size: rem(18);
+  }
+
+  h3, h4 {
+    font-size: rem(29);
+  }
+}

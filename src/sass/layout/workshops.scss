@@ -1,0 +1,270 @@
+#workshops {
+    .level {
+      position: relative;
+      background-color: $secondary;
+    }
+  
+    .skill p {
+      color: $white;
+    }
+
+    blockquote {
+      color: $white;
+      font-family: "Source Sans 3", sans-serif;
+      font-weight: 300;
+    }
+
+    .level-icon {
+      align-self: center;
+      overflow: visible;
+      background-color: $lightgrey;
+      border-radius: 50%;
+    }
+    
+    .level-icon img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  
+  @include breakpoint(0, $mobile) {
+    #workshops {
+      margin-bottom: rem($sm-m);
+      margin-top: rem($sm-m);
+
+      .skill-number {
+        position: absolute;
+        text-align: center;
+        top: -21%;
+        left: 50%;
+        color: $primary;
+        background-color: $lightergrey;
+        border-radius: 50%;
+        width: rem(38);
+        height: rem(38);
+        padding: rem(5);
+        font-weight: 600;
+        font-size: rem(28);
+        line-height: rem(28);
+        margin-left: rem(30);
+        z-index: -1;
+      }
+  
+      .level {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: rem(100);
+        padding: rem($bp-m);
+      }
+  
+      .level-icon {
+        max-width: rem(100);
+        padding: rem(20);
+        margin-top: rem(-70);
+      }
+
+      h3 {
+        padding: rem(10) 0;
+      }
+  
+      .button {
+         margin: rem(10) 0;
+      }
+
+      .quote {
+        max-width: rem(50);
+      }
+    
+      blockquote {
+        font-size: rem(20);
+        padding-bottom: rem(20);
+        padding-top: rem(10);
+      }
+        
+      .quote-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .super-headline {
+        padding-left: rem($bp-m);
+      }
+  
+      h2 {
+        padding-left: rem($bp-m);
+      }
+    }
+  }
+  
+  @include breakpoint($desktop) {  
+    #workshops {
+      margin-bottom: rem($sm-d);
+      margin-top: rem($sm-d);
+      padding: 0 rem($bp-d);
+  
+      .level {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: rem(30);
+        max-width: 80vw;              
+
+        p {
+          padding: rem($bp-m) 0;
+        }
+      }
+
+      h2 {
+        padding-bottom: rem($sp-m);
+      }
+
+      blockquote {
+        font-size: rem(29);
+        line-height: rem(38);
+      }
+
+      .num {
+        display: flex;
+        background-color: $white;
+        height: 100%;
+
+        .skill-number {
+          font-size: rem(250);
+          font-weight: 600;
+          margin-right: -20px;
+          line-height: 1;
+          height: 100%;
+          padding: 0;
+        }
+      }
+
+      .workshop-container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .skill {
+        width: 50%;
+        padding: rem($bp-d);
+      }
+
+      .quote-block {
+        width: 40%;
+      }
+
+      .quote {
+        max-width: rem(120);
+      }
+
+      .level-icon {
+        padding: rem(35);
+        width: rem(180);
+        margin: rem($bp-d);
+      }
+  
+      .level-3 {
+          align-self: flex-end;
+  
+        .level-icon {
+          order: 2;
+        }
+    
+        .quote-block {
+          display: flex;
+          flex-direction: column-reverse;
+          order: 3;
+
+          .quote {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+          }
+
+          blockquote {
+            padding-top: rem($bp-d);
+            padding-left: rem($bp-d);
+          }
+        }
+
+        .skill {
+          order: 1;
+        }
+/* funktioniert nicht, keine andere Lösung gefunden? */
+        .skill-number {
+          align-self: flex-start;
+        }
+
+      }
+      .level-2 {
+        align-self: center;
+  
+        .skill {
+          order: 3;
+        }
+
+        .level-icon {
+          order: 2;
+        }
+
+        .quote-block {
+          order: 1;
+
+          .quote {
+            position: absolute;
+            top: 0;
+            left: 25%;
+          }
+
+          blockquote {
+            position: absolute;
+            top: 50%;
+            max-width: 30%;
+            padding-left: rem($bp-d);
+          }
+        }
+
+        .skill-number {
+          align-self: center;
+        }
+      }
+      .level-1 {
+        align-self: flex-start;
+  
+        .skill {
+          order: 2;
+        }
+
+        .level-icon {
+          order: 1;
+        }
+
+        .quote-block {
+          order: 3;
+
+          .quote {
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+
+          blockquote {
+            position: absolute;
+            top: 60%;
+            padding-left: rem($bp-d);
+          }
+        }
+        .skill-number {
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+

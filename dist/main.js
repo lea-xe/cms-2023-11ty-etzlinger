@@ -1,0 +1,1 @@
+(()=>{var i=Object.defineProperty;var o=(e,t)=>{for(var a in t)i(e,a,{get:t[a],enumerable:!0})};var n={};o(n,{init:()=>s});function s(){}document.getElementById("hamburger").addEventListener("click",c);function c(){var e=document.getElementById("navbar");e.classList.contains("open")?e.classList.remove("open"):e.classList.add("open")}window.MainNav=n;})();

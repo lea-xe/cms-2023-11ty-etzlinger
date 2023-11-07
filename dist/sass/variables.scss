@@ -1,0 +1,31 @@
+// MAX-WIDTH CONTAINER SIZE
+$max-width: 1920;
+
+
+// BREAKPOINTS
+$mobile: 900;
+$desktop: $mobile + 1;
+
+
+// COLORS
+// $copy: ;
+// $bgcolor: ;
+$primary: #D5874C;
+$orangelight: #EF9D5F;
+$orangelighter: #FFAD6E;
+$bgbeige: #FFF7F2;
+$secondary: #363636;
+$lightgrey: #595959;
+$lightergrey: #D5D5D5;
+$bggrey: #F7F7F7;
+$white: #FFFFFF;
+
+//PADDINGS
+$sp-d: 100; //section padding
+$sp-m: 50; //section padding
+$bp-d: 30; //border padding
+$bp-m: 15; //border padding
+
+//MARGINS
+$sm-d: 100; //section margin
+$sm-m: 60; //section margin
